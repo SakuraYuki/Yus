@@ -83,17 +83,18 @@ namespace System
             if (base64 == null) throw new ArgumentException("null 无法进行 Base64 编码");
             return Yus.Security.YusBase64.Base64Decode(base64);
         }
-        
+
         /// <summary>
         /// 将 <see cref="string"/>(JSON) 转换到指定对象
         /// </summary>
         /// <param name="value"><see cref="string"/>(JSON) 值</param>
+        /// <param name="sets">反序列化设置</param>
         /// <returns></returns>
-        public static T YusToObject<T>(this string value)
+        public static T YusToObject<T>(this string value, Swifter.Json.JsonFormatterOptions sets = Swifter.Json.JsonFormatterOptions.Default)
         {
-            return Yus.Serialization.YusJson.ToObject<T>(value);
+            return Yus.Serialization.YusJson.ToObject<T>(value, sets: sets);
         }
-        
+
         /// <summary>
         /// 字符串是空或者null
         /// </summary>

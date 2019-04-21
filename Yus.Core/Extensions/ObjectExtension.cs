@@ -29,8 +29,14 @@ namespace System
         /// <summary>
         /// 转换为 JSON
         /// </summary>
+        /// <param name="obj">要序列化的对象</param>
+        /// <param name="indented">是否格式化</param>
+        /// <param name="sets">序列化设置</param>
         /// <returns></returns>
-        public static string YusToJson(this object obj) { return obj.YusIsNull() ? null : YusJson.ToJson(obj); }
+        public static string YusToJson(this object obj, bool indented = false, Swifter.Json.JsonFormatterOptions sets = Swifter.Json.JsonFormatterOptions.Default)
+        {
+            return obj.YusIsNull() ? null : YusJson.ToJson(obj, indented: indented, sets: sets);
+        }
 
         /// <summary>
         /// 强制转换为指定对象 , 简化写法, 出错不管

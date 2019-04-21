@@ -37,12 +37,13 @@ namespace Yus.Serialization
         /// </summary>
         /// <typeparam name="T">要序列化成哪种对象</typeparam>
         /// <param name="json">JSON 字符</param>
+        /// <param name="sets">反序列化设置</param>
         /// <returns></returns>
-        public static T ToObject<T>(string json)
+        public static T ToObject<T>(string json, JsonFormatterOptions sets = JsonFormatterOptions.Default)
         {
             try
             {
-                return JsonFormatter.DeserializeObject<T>(json, Settings);
+                return JsonFormatter.DeserializeObject<T>(json, sets);
             }
             catch (Exception e)
             {
