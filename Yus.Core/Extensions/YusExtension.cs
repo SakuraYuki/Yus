@@ -7,9 +7,7 @@ using Yus.Diagnostics;
 
 namespace System
 {
-    /// <summary>
-    /// Yus通用扩展
-    /// </summary>
+    /// <summary>Yus通用扩展</summary>
     public static class YusExtension
     {
         /// <summary>
@@ -38,6 +36,26 @@ namespace System
             var index = str.IndexOf('.');
             if (index == -1 || index + number > str.Length - 1) return str;
             return str.Substring(0, index + number + 1);
+        }
+
+        /// <summary>
+        /// <see cref="DateTime"/>转JavaScript时间戳
+        /// </summary>
+        /// <param name="date">指定时间</param>
+        /// <returns></returns>
+        public static long ToJsTimestamp(this DateTime date)
+        {
+            return Yus.Apps.YusDate.DateTimeToJs(date);
+        }
+
+        /// <summary>
+        /// JavaScript时间戳转<see cref="DateTime"/>
+        /// </summary>
+        /// <param name="ts">JavaScript时间戳</param>
+        /// <returns></returns>
+        public static DateTime ToDateTime(this long ts)
+        {
+            return Yus.Apps.YusDate.JsToDateTime(ts);
         }
     }
 }
