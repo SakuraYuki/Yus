@@ -3,7 +3,7 @@ using System;
 using System.Management;
 using System.Net.NetworkInformation;
 
-namespace Yus.Core.Apps
+namespace Yus.Apps
 {
     /// <summary>电脑信息获取（依赖系统服务，使用<see cref="ManagementClass"/>类）</summary>
     public class YusComputerInfo

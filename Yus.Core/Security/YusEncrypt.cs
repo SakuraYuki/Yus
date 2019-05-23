@@ -4,7 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Yus.Core.Security
+namespace Yus.Security
 {
     /// <summary>
     /// 异常处理类

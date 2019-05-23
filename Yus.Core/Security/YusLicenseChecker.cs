@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Text;
 using Yus.Apps;
-using Yus.Core.Apps;
 
-namespace Yus.Core.Security
+namespace Yus.Security
 {
     /// <summary>授权检查器</summary>
     public class YusLicenseChecker
