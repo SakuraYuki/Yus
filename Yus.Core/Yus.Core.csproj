@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apps\YusApps.cs" />
+    <Compile Include="Apps\YusComputerInfo.cs" />
     <Compile Include="Apps\YusConfig.cs" />
     <Compile Include="Apps\YusDate.cs" />
     <Compile Include="Config\YusBaseConfig.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Reflection\YusEnum.cs" />
     <Compile Include="Security\YusBase64.cs" />
     <Compile Include="Security\YusEncrypt.cs" />
+    <Compile Include="Security\YusLicenseChecker.cs" />
     <Compile Include="Serialization\YusJson.cs" />
     <Compile Include="Text\YusCombGuid.cs" />
     <Compile Include="Third.SharpConfig\Configuration.cs" />
