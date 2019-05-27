@@ -12,8 +12,9 @@
 ## 使用开源项目
 
 非常感谢以下项目提供的强力驱动
-[https://github.com/Dogwei/Swifter.Core](Swifter.Core)
-[https://github.com/cemdervis/SharpConfig](SharpConfig)
+
+- [Swifter.Core](https://github.com/Dogwei/Swifter.Core)
+- [SharpConfig](https://github.com/cemdervis/SharpConfig)
 
 ## 后续
 
