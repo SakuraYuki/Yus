@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mate", "Mate", "{38E7E9CB-D
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{97F98274-8C4A-4E51-8EFB-1D11B2BDFB69}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\icon.ico = Resources\icon.ico
+		Resources\icon.png = Resources\icon.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

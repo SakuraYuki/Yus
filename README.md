@@ -1,5 +1,7 @@
 # .NET Yus Utility
 
+![Icon](https://github.com/SakuraYuki/Yus/raw/master/Resources/icon.png "Yus.Core")
+
 基于.NET 4.0的实用工具集，解决小型项目快速开发的问题，最小侵入性。
 
 ## 特色功能
@@ -15,6 +17,10 @@
 
 - [Swifter.Core](https://github.com/Dogwei/Swifter.Core)
 - [SharpConfig](https://github.com/cemdervis/SharpConfig)
+
+## 使用资源
+
+使用图标来自[Iconfont](https://www.iconfont.cn)，作者[糖弹谭](https://www.iconfont.cn/user/detail?spm=a313x.7781069.0.d214f71f6&uid=138464)
 
 ## 后续
 
