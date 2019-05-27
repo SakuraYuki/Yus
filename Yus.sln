@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mate", "Mate", "{38E7E9CB-D
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
+		Yus.Core\Yus.Core.nuspec = Yus.Core\Yus.Core.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{97F98274-8C4A-4E51-8EFB-1D11B2BDFB69}"
