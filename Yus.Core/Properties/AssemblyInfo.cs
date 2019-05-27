@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("YusTech")]
 [assembly: AssemblyProduct("Yus技术团队出品")]
 [assembly: AssemblyCopyright("Copyright © YusTech 2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Yus")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
