@@ -17,6 +17,7 @@
 
 - [Swifter.Core](https://github.com/Dogwei/Swifter.Core)
 - [SharpConfig](https://github.com/cemdervis/SharpConfig)
+- [X](https://github.com/NewLifeX/X)
 
 ## 使用资源
 
