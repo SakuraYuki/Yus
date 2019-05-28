@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Yus.Core")]
-[assembly: AssemblyDescription("Yus框架-核心模块")]
+[assembly: AssemblyDescription("Yus框架-核心模块，丰富的扩展方法，易于使用的工具类库")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("YusTech")]
 [assembly: AssemblyProduct("Yus技术团队出品")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 可以指定所有值，也可以使用以下所示的 "*" 预置版本号和修订号
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.3")]
-[assembly: AssemblyFileVersion("1.0.1.3")]
+[assembly: AssemblyVersion("1.0.1.4")]
+[assembly: AssemblyFileVersion("1.0.1.4")]
