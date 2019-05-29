@@ -57,7 +57,7 @@ namespace System
         /// <returns>MD5值</returns>
         public static string YusMd5(this string text, bool lowerCase = false, bool line = false, Encoding encoding = null)
         {
-            return Yus.Common.Base.Text.YusMd5.GetMd5(text, lowerCase: lowerCase, line: line, encoding: encoding);
+            return Yus.Text.YusMd5.GetMd5(text, lowerCase: lowerCase, line: line, encoding: encoding);
         }
 
         /// <summary>
