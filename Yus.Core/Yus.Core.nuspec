@@ -14,5 +14,11 @@
     <releaseNotes>修复YusMd5的命名空间错误，更新基础配置类</releaseNotes>
     <copyright>Copyright © YusTech 2019</copyright>
     <tags>Utility Yus Extension</tags>
+    <references>
+      <reference file="Swifter.Pointer.dll" />
+    </references>
   </metadata>
+  <files>
+    <file src="../Publish/Swifter.Pointer.dll" target="lib" />
+  </files>
 </package>

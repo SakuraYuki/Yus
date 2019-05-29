@@ -34,7 +34,8 @@
     <DocumentationFile>..\Publish\Yus.Core.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Swifter.Pointer">
+    <Reference Include="Swifter.Pointer, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Swifter.Pointer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
