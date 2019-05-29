@@ -1,4 +1,5 @@
 ﻿using System;
+using SharpConfig;
 
 namespace Yus.Config
 {
@@ -62,6 +63,26 @@ namespace Yus.Config
         public virtual void Save()
         {
             Cfg.SaveToFile(ConfigFileName);
+        }
+
+        /// <summary>
+        /// 获取设置，如果出现问题就重置默认值
+        /// </summary>
+        /// <param name="section">所属部分名</param>
+        /// <param name="key">参数键</param>
+        /// <returns></returns>
+        protected Setting GetSetting(string section, string key)
+        {
+            try
+            {
+                return Cfg[section][key];
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                SetConfig(Cfg);
+            }
+            return Cfg[section][key];
         }
     }
 }
