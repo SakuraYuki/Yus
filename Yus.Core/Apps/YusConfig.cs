@@ -32,7 +32,7 @@ namespace Yus.Apps
         }
 
         /// <summary>配置文件全路径</summary>
-        public override string ConfigFileName => Yus.Apps.YusApps.AppPath + "Yus.cfg";
+        public override string ConfigFileName => YusApps.AppPath + "Yus.cfg";
 
         /// <summary>设置配置文件初始化的内容</summary>
         protected override Action<SharpConfig.Configuration> SetConfig => cfg =>
@@ -54,7 +54,7 @@ namespace Yus.Apps
         /// <summary>日志目录</summary>
         public string LogDir
         {
-            get { return System.IO.Path.Combine(Yus.Apps.YusApps.AppPath, Cfg[App][nameof(LogDir)].StringValue); }
+            get { return System.IO.Path.Combine(YusApps.AppPath, GetSetting(App, nameof(LogDir)).StringValue); }
             set
             {
                 Cfg[App][nameof(LogDir)].StringValue = value;
@@ -65,7 +65,7 @@ namespace Yus.Apps
         /// <summary>导出目录</summary>
         public string ExportDir
         {
-            get { return System.IO.Path.Combine(Yus.Apps.YusApps.AppPath, Cfg[App][nameof(ExportDir)].StringValue); }
+            get { return System.IO.Path.Combine(YusApps.AppPath, GetSetting(App, nameof(ExportDir)).StringValue); }
             set
             {
                 Cfg[App][nameof(ExportDir)].StringValue = value;
@@ -76,7 +76,7 @@ namespace Yus.Apps
         /// <summary>临时文件目录</summary>
         public string TempDir
         {
-            get { return System.IO.Path.Combine(Yus.Apps.YusApps.AppPath, Cfg[App][nameof(TempDir)].StringValue); }
+            get { return System.IO.Path.Combine(YusApps.AppPath, GetSetting(App, nameof(TempDir)).StringValue); }
             set
             {
                 Cfg[App][nameof(TempDir)].StringValue = value;
@@ -87,7 +87,7 @@ namespace Yus.Apps
         /// <summary>数据目录</summary>
         public string DataDir
         {
-            get { return System.IO.Path.Combine(Yus.Apps.YusApps.AppPath, Cfg[App][nameof(DataDir)].StringValue); }
+            get { return System.IO.Path.Combine(YusApps.AppPath, GetSetting(App, nameof(DataDir)).StringValue); }
             set
             {
                 Cfg[App][nameof(DataDir)].StringValue = value;
@@ -98,7 +98,7 @@ namespace Yus.Apps
         /// <summary>是否进行Debug</summary>
         public bool Debug
         {
-            get { return Cfg[Run][nameof(Debug)].BoolValue; }
+            get { return GetSetting(Run, nameof(Debug)).BoolValue; }
             set
             {
                 Cfg[Run][nameof(Debug)].BoolValue = value;
