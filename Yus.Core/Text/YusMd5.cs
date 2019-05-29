@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Yus.Common.Base.Text
+namespace Yus.Text
 {
     /// <summary>MD5获取</summary>
     public class YusMd5
