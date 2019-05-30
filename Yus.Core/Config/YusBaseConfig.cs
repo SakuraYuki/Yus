@@ -1,5 +1,4 @@
 ﻿using System;
-using SharpConfig;
 
 namespace Yus.Config
 {
@@ -71,16 +70,28 @@ namespace Yus.Config
         /// <param name="section">所属部分名</param>
         /// <param name="key">参数键</param>
         /// <returns></returns>
-        protected Setting GetSetting(string section, string key)
+        protected SharpConfig.Setting GetSetting(string section, string key)
         {
             try
             {
+                if (!Cfg.Contains(section) || !Cfg[section].Contains(key))
+                {
+                    SetConfig?.Invoke(Cfg);
+                    Save();
+                }
                 return Cfg[section][key];
+            }
+            catch (SharpConfig.SettingValueCastException ex)
+            {
+                Console.WriteLine("字符类型无法转换: " + ex);
+                SetConfig?.Invoke(Cfg);
+                Save();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                SetConfig(Cfg);
+                SetConfig?.Invoke(Cfg);
+                Save();
             }
             return Cfg[section][key];
         }
