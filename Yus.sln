@@ -3,13 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yus.Core", "Yus.Core\Yus.Core.csproj", "{2A12A045-334C-444E-8327-333C63210647}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mate", "Mate", "{38E7E9CB-D0C1-4468-B49C-DCEDDEBD0E31}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
-		Yus.Core\Yus.Core.nuspec = Yus.Core\Yus.Core.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{97F98274-8C4A-4E51-8EFB-1D11B2BDFB69}"
@@ -19,16 +16,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		Resources\icon_nuget.png = Resources\icon_nuget.png
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yus", "Yus\Yus.csproj", "{E16F6338-89A3-4BAE-8B91-FC1B305F627C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A12A045-334C-444E-8327-333C63210647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A12A045-334C-444E-8327-333C63210647}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A12A045-334C-444E-8327-333C63210647}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A12A045-334C-444E-8327-333C63210647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16F6338-89A3-4BAE-8B91-FC1B305F627C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16F6338-89A3-4BAE-8B91-FC1B305F627C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16F6338-89A3-4BAE-8B91-FC1B305F627C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16F6338-89A3-4BAE-8B91-FC1B305F627C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

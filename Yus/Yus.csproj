@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;net40;net45;net451;net452;net461</TargetFrameworks>
+		<Description>NET基础类库集，融合了多个开源框架，同时兼容.NET 4.0+和.NET Standard2.0的实用工具集，解决小型项目快速开发的问题，最小侵入性。</Description>
+		<Copyright>Copyright 2019-2020 SakuraYuki @Yus Tech</Copyright>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<AssemblyVersion>1.0.3.0</AssemblyVersion>
+		<FileVersion>1.0.3.0</FileVersion>
+		<PackageIcon>Logo.png</PackageIcon>
+		<PackageLicenseFile></PackageLicenseFile>
+		<Version>1.0.3.0</Version>
+		<Authors>SakuraYuki</Authors>
+		<PackageProjectUrl>https://github.com/SakuraYuki/Yus</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SakuraYuki/Yus.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>yus utility c# csharp extension common library</PackageTags>
+		<PackageReleaseNotes>1.全面升级为通用类库
+2.移除部分冗余内容
+		</PackageReleaseNotes>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>..\Publish\</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+		<DocumentationFile>..\Publish\Yus.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\Logo.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Content Include="..\References\Swifter.Pointer.dll">
+			<Pack>true</Pack>
+			<PackagePath>\lib\net40\</PackagePath>
+		</Content>
+		<Content Include="..\References\Swifter.Pointer.dll">
+			<Pack>true</Pack>
+			<PackagePath>\lib\net45\</PackagePath>
+		</Content>
+		<Content Include="..\References\Swifter.Pointer.dll">
+			<Pack>true</Pack>
+			<PackagePath>\lib\net451\</PackagePath>
+		</Content>
+		<Content Include="..\References\Swifter.Pointer.dll">
+			<Pack>true</Pack>
+			<PackagePath>\lib\net452\</PackagePath>
+		</Content>
+		<Content Include="..\References\Swifter.Pointer.dll">
+			<Pack>true</Pack>
+			<PackagePath>\lib\net461\</PackagePath>
+		</Content>
+		<Content Include="..\References\Swifter.Pointer.dll">
+			<Pack>true</Pack>
+			<PackagePath>\lib\netstandard2.0\</PackagePath>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Swifter.Pointer">
+			<HintPath>..\References\Swifter.Pointer.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="System.Reflection.Emit">
+			<Version>4.7.0</Version>
+		</PackageReference>
+		<PackageReference Include="System.Reflection.Emit.ILGeneration">
+			<Version>4.7.0</Version>
+		</PackageReference>
+		<PackageReference Include="System.Reflection.Emit.Lightweight">
+			<Version>4.7.0</Version>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
