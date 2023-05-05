@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Newtonsoft.Json;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace System
@@ -84,11 +85,11 @@ namespace System
         /// 将 <see cref="string"/>(JSON) 转换到指定对象
         /// </summary>
         /// <param name="value"><see cref="string"/>(JSON) 值</param>
-        /// <param name="sets">反序列化设置</param>
+        /// <param name="settings">反序列化设置</param>
         /// <returns></returns>
-        public static T YusToObject<T>(this string value, Swifter.Json.JsonFormatterOptions sets = Swifter.Json.JsonFormatterOptions.Default)
+        public static T YusToObject<T>(this string value, JsonSerializerSettings settings = null)
         {
-            return Yus.Serialization.YusJson.ToObject<T>(value, sets: sets);
+            return Yus.Serialization.YusJson.ToObject<T>(value, settings: settings);
         }
 
         /// <summary>

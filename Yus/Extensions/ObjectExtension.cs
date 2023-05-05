@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using Newtonsoft.Json;
+using System.Reflection;
 using Yus.Diagnostics;
 using Yus.Serialization;
 
@@ -26,11 +27,12 @@ namespace System
         /// 转换为 JSON
         /// </summary>
         /// <param name="obj">要序列化的对象</param>
-        /// <param name="sets">序列化设置</param>
+        /// <param name="formatting">JSON格式，对齐还是压缩</param>
+        /// <param name="settings">序列化设置</param>
         /// <returns></returns>
-        public static string YusToJson(this object obj, Swifter.Json.JsonFormatterOptions sets = Swifter.Json.JsonFormatterOptions.Default)
+        public static string YusToJson(this object obj, Formatting formatting = Formatting.None, JsonSerializerSettings settings = null)
         {
-            return obj.YusIsNull() ? null : YusJson.ToJson(obj, sets: sets);
+            return obj.YusIsNull() ? null : YusJson.ToJson(obj, formatting: formatting, settings: settings);
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿using Swifter.Json;
+﻿using Newtonsoft.Json;
 using System;
 
 namespace Yus.Serialization
@@ -10,12 +10,13 @@ namespace Yus.Serialization
         /// 序列化对象到 JSON 字符串
         /// </summary>
         /// <param name="obj">要序列化的对象</param>
-        /// <param name="sets">序列化设置</param>
+        /// <param name="formatting">JSON格式，对齐还是压缩</param>
+        /// <param name="settings">序列化设置</param>
         /// <returns></returns>
-        public static string ToJson(object obj, JsonFormatterOptions sets = JsonFormatterOptions.Default)
+        public static string ToJson(object obj, Formatting formatting = Formatting.None, JsonSerializerSettings settings = null)
         {
             if (obj == null) return null;
-            return JsonFormatter.SerializeObject(obj, sets);
+            return JsonConvert.SerializeObject(obj, formatting: formatting, settings: settings);
         }
 
         /// <summary>
@@ -23,13 +24,13 @@ namespace Yus.Serialization
         /// </summary>
         /// <typeparam name="T">要序列化成哪种对象</typeparam>
         /// <param name="json">JSON 字符</param>
-        /// <param name="sets">反序列化设置</param>
+        /// <param name="settings">反序列化设置</param>
         /// <returns></returns>
-        public static T ToObject<T>(string json, JsonFormatterOptions sets = JsonFormatterOptions.Default)
+        public static T ToObject<T>(string json, JsonSerializerSettings settings = null)
         {
             try
             {
-                return JsonFormatter.DeserializeObject<T>(json, sets);
+                return JsonConvert.DeserializeObject<T>(json, settings);
             }
             catch (Exception e)
             {

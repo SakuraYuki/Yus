@@ -6,11 +6,11 @@
 		<Copyright>Copyright 2019-2020 SakuraYuki @Yus Tech</Copyright>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<AssemblyVersion>1.0.3.0</AssemblyVersion>
-		<FileVersion>1.0.3.0</FileVersion>
+		<AssemblyVersion>1.0.3.1</AssemblyVersion>
+		<FileVersion>1.0.3.1</FileVersion>
 		<PackageIcon>Logo.png</PackageIcon>
 		<PackageLicenseFile></PackageLicenseFile>
-		<Version>1.0.3.0</Version>
+		<Version>1.0.3.1</Version>
 		<Authors>SakuraYuki</Authors>
 		<PackageProjectUrl>https://github.com/SakuraYuki/Yus</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/SakuraYuki/Yus.git</RepositoryUrl>
@@ -41,32 +41,10 @@
 			<PackagePath></PackagePath>
 		</None>
 	</ItemGroup>
-	
+
 	<ItemGroup>
-		<Content Include="..\References\Swifter.Pointer.dll">
-			<Pack>true</Pack>
-			<PackagePath>\lib\net40\</PackagePath>
-		</Content>
-		<Content Include="..\References\Swifter.Pointer.dll">
-			<Pack>true</Pack>
-			<PackagePath>\lib\net45\</PackagePath>
-		</Content>
-		<Content Include="..\References\Swifter.Pointer.dll">
-			<Pack>true</Pack>
-			<PackagePath>\lib\net451\</PackagePath>
-		</Content>
-		<Content Include="..\References\Swifter.Pointer.dll">
-			<Pack>true</Pack>
-			<PackagePath>\lib\net452\</PackagePath>
-		</Content>
-		<Content Include="..\References\Swifter.Pointer.dll">
-			<Pack>true</Pack>
-			<PackagePath>\lib\net461\</PackagePath>
-		</Content>
-		<Content Include="..\References\Swifter.Pointer.dll">
-			<Pack>true</Pack>
-			<PackagePath>\lib\netstandard2.0\</PackagePath>
-		</Content>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <PackageReference Include="sharpconfig" Version="3.2.9.1" />
 	</ItemGroup>
 
 	<ItemGroup>

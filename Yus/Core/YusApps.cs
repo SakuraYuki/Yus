@@ -8,6 +8,6 @@ namespace Yus
         /// <summary>
         /// 程序全路径，例如C:/Software/Notepad
         /// </summary>
-        public static string AppPath { get; set; } = AppDomain.CurrentDomain.BaseDirectory.YusPathCase();
+        public static string AppPath { get; set; } = AppDomain.CurrentDomain.BaseDirectory;
     }
 }
